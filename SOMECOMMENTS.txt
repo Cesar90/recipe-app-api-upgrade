@@ -1,0 +1,10 @@
+docker-compose run --rm app sh -c "python manage.py collecstatic"
+
+docker-compose runs a Docker Compose Command
+run will start a specific container defined in config
+--rm removes the container
+app is the name of the service
+sh -c passes in a shell command
+Command to run inside container
+
+test docker file => docker build .
