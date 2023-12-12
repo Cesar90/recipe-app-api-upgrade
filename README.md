@@ -6,6 +6,10 @@ Project based on django rest framework with docker
 
 docker-compose build
 
+# Create django project
+
+docker-compose run --rm app sh -c "django-admin startproject app ."
+
 # Run Linting
 
 docker-compose run --rm app sh -c "flake8"
