@@ -21,3 +21,15 @@ docker-compose run --rm app sh -c "python manage.py test"
 # Create core app
 
 docker-compose run --rm app sh -c "python manage.py startapp core"
+
+# Test if database is ready
+
+docker-compose run --rm app sh -c "python manage.py wait_for_db"
+
+# Fix flake8 erros
+
+docker-compose run --rm app sh -c "python /app/flake8_autofix.py"
+
+# Test if database is ready and run flake8
+
+docker-compose run --rm app sh -c "python manage.py wait_for_db && flake8"
