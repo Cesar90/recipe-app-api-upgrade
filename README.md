@@ -53,3 +53,7 @@ docker-compose run --rm app sh -c "python manage.py startapp user"
 # Create migration for Recipe Model
 
 docker-compose run --rm app sh -c "python manage.py makemigrations"
+
+# Create recipe app
+
+docker-compose run --rm app sh -c "python manage.py startapp recipe"
